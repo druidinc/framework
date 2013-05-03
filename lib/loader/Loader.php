@@ -28,7 +28,6 @@
 		public static function getInstance(){
 			if(self::$_instance == null) {
 				$className = __CLASS__;	
-				echo $classname;
 				self::$_instance = new $className;				
 			}
 			
@@ -41,6 +40,7 @@
 			
 			$path = $rtr_config['base_url'] . $controllerName;
 			
+			die('helllo there');
 			header('Location: ' . $path);
 		}
 
