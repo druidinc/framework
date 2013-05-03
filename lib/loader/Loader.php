@@ -45,7 +45,7 @@
 		}
 
 		public function view($viewName,$data = array(),$fetch=false){
-			
+			die('helllo there');
 
 			$this->_viewName = $viewName;
 
