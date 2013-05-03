@@ -28,6 +28,7 @@
 		public static function getInstance(){
 			if(self::$_instance == null) {
 				$className = __CLASS__;	
+				echo $classname;
 				self::$_instance = new $className;				
 			}
 			
