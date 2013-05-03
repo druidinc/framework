@@ -40,12 +40,12 @@
 			
 			$path = $rtr_config['base_url'] . $controllerName;
 			
-			die('helllo there');
+			
 			header('Location: ' . $path);
 		}
 
 		public function view($viewName,$data = array(),$fetch=false){
-
+			die('helllo there');
 
 			$this->_viewName = $viewName;
 
