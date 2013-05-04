@@ -35,7 +35,7 @@
 
 
 		public function controller($controllerName){
-			include_once $_SERVER['config'] . '/Router.php';
+			global $rtr_config;
 			
 			$path = $rtr_config['base_url'] . $controllerName;
 			
