@@ -9,7 +9,7 @@
 
 
 		public function __construct(){
-			
+			global $db_config;
 			
 
 			$this->db_config = $db_config;
