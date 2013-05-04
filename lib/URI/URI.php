@@ -59,7 +59,9 @@
 		}
 
 		public function parseURISegment(){
-			include $_SERVER['application'] . '/config/Router.php';
+
+			global $rtr_config;
+
 			$this->_URISegments = str_replace($rtr_config['base_url'], '', $this->_URISegments);
 			$this->_URISegments =  str_replace('index.php/', '', $this->_URISegments);
 			$parsedSegment =  str_replace('index.php', '', $this->_URISegments);

@@ -12,11 +12,7 @@
 
 		public function mapController(){
 
-			include $_SERVER['lib'] . '/controller/Controller.php';
-			include $_SERVER['lib'] . '/session/Session.php';
-			include $_SERVER['helper'] . '/Form.php';
-			include $_SERVER['tools'] . '/Tools.php';
-
+			
 
 			$controllerClass = null;
 			$folderPath = '';
@@ -53,7 +49,7 @@
 
 					//check if first segment in the root
 					if(file_exists($_SERVER['application'] . '/controller' . $folderPath . '/' . ucfirst(strtolower($segment)) . '.php')) {
-						include $_SERVER['application'] . '/controller' . $folderPath . '/' .ucfirst(strtolower($segment)) . '.php';
+						include_once $_SERVER['application'] . '/controller' . $folderPath . '/' .ucfirst(strtolower($segment)) . '.php';
 
 						
 						$className =  ucfirst(strtolower($segment));
@@ -118,9 +114,7 @@
 		}
 
 		public function mapModel(){
-
-			
-			require_once $_SERVER['lib'] . '/model/Model.php';
+				
 
 			$modelClass = null;
 			$folderPath = '';
@@ -132,7 +126,7 @@
 				//check if first segment in the root
 				if(file_exists($_SERVER['application'] . '/model' . $folderPath . '/' . ucfirst($segment) . '.php')) {
 					
-					include $_SERVER['application'] . '/model' . $folderPath . '/' .ucfirst($segment) . '.php';
+					include_once $_SERVER['application'] . '/model' . $folderPath . '/' .ucfirst($segment) . '.php';
 
 					$className =  ucfirst($segment);
 					$modelClass = new $className;

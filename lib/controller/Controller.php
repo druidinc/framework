@@ -17,8 +17,7 @@
 
 
 		public function __construct(){			
-
-			include $_SERVER['application'] . '/config/Router.php';
+			global $rtr_config;
 
 			$this->session = Session::getInstance();
 			$this->load = Loader::getInstance();
