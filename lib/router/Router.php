@@ -62,6 +62,9 @@
 
 
 						$className =  implode('_', $explodedSegment);
+						
+						echo $className;
+
 						//$controllerClass = $className::getInstance($className);
 						$controllerClass = new $className;
 
