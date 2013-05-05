@@ -56,7 +56,7 @@
 						
 						$explodedSegment = explode('_', $segment);
 
-						print_r($explodedSegment);
+						print_r($segment);
 
 						foreach ($explodedSegment as &$value) {
 							$value = ucfirst($value);
