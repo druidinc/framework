@@ -44,6 +44,8 @@
 				}
 			} else {
 
+				print_r($this->_segments);
+				die();
 
 				foreach ($this->_segments as $segment) {
 
@@ -60,6 +62,10 @@
 
 
 						$className =  implode('_', $explodedSegment);
+<<<<<<< HEAD
+=======
+						
+>>>>>>> b527654e17be66586c6d0a7b9ad3d13c20f1a92b
 						$controllerClass = $className::getInstance($className);
 
 						$found = true;
