@@ -52,7 +52,15 @@
 						include_once $_SERVER['application'] . '/controller' . $folderPath . '/' .ucfirst(strtolower($segment)) . '.php';
 
 						
-						$className =  ucfirst(strtolower($segment));
+						$explodedSegment = explode('_', strtolower($segment));
+
+						foreach ($explodedSegment as &$value) {
+							$value = ucfirst($value);
+						}
+
+
+						$className =  implode('_', $explodedSegment);
+						die($className);
 						$controllerClass = $className::getInstance($className);
 
 						$found = true;
