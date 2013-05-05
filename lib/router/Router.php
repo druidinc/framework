@@ -45,7 +45,7 @@
 				}
 			} else {
 
-				print_r($this->_segments);
+				
 
 				foreach ($this->_segments as $segment) {
 
@@ -54,7 +54,9 @@
 						include_once $_SERVER['application'] . '/controller' . $folderPath . '/' .ucfirst(strtolower($segment)) . '.php';
 
 						
-						$explodedSegment = explode('_', strtolower($segment));
+						$explodedSegment = explode('_', $segment);
+
+						print_r($this->explodedSegment);
 
 						foreach ($explodedSegment as &$value) {
 							$value = ucfirst($value);
@@ -62,7 +64,7 @@
 
 
 						$className =  implode('_', $explodedSegment);
-						
+
 						echo $className;
 
 						//$controllerClass = $className::getInstance($className);
