@@ -38,7 +38,8 @@
 
 
 
-					$controllerClass = $className::getInstance($className);
+					//$controllerClass = $className::getInstance($className);
+					$controllerClass = new $className;
 
 					$found = true;
 				}
@@ -61,7 +62,8 @@
 
 
 						$className =  implode('_', $explodedSegment);
-						$controllerClass = $className::getInstance($className);
+						//$controllerClass = $className::getInstance($className);
+						$controllerClass = new $className;
 
 						$found = true;
 						$lastSegment = $className;
