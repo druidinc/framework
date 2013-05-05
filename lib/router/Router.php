@@ -44,6 +44,8 @@
 				}
 			} else {
 
+				print_r($this->_segments);
+				die();
 
 				foreach ($this->_segments as $segment) {
 
