@@ -48,6 +48,17 @@
 				return self::$_instance;
 		}
 
+		public function validateGetField($field, $getArray){
+			if(is_array($getArray)) {
+				if(count($getArray)) {
+					if(array_key_exists($field, $getArray) && strlen(trim($getArray[$field])))
+						return true;
+				}
+			}
+
+			return false;
+		}
+
 		public function __destruct(){
 			self::$_instance = null;
 		}
