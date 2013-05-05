@@ -60,7 +60,6 @@
 
 
 						$className =  implode('_', $explodedSegment);
-						die($className);
 						$controllerClass = $className::getInstance($className);
 
 						$found = true;
