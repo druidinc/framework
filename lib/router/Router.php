@@ -56,7 +56,7 @@
 						
 						$explodedSegment = explode('_', $segment);
 
-						print_r($segment);
+
 
 						foreach ($explodedSegment as &$value) {
 							$value = ucfirst($value);
@@ -65,7 +65,7 @@
 
 						$className =  implode('_', $explodedSegment);
 
-						echo $className;
+						
 
 						//$controllerClass = $className::getInstance($className);
 						$controllerClass = new $className;
