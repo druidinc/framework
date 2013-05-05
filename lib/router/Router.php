@@ -49,9 +49,17 @@
 
 				foreach ($this->_segments as $segment) {
 
+					$explodedSegment = explode('_', $segment);
+
+					foreach ($explodedSegment as &$value) {
+						$value = ucfirst($value);
+					}
+
+					$className =  implode('_', $explodedSegment);
+
 					//check if first segment in the root
-					if(file_exists($_SERVER['application'] . '/controller' . $folderPath . '/' . ucfirst(strtolower($segment)) . '.php')) {
-						include_once $_SERVER['application'] . '/controller' . $folderPath . '/' .ucfirst(strtolower($segment)) . '.php';
+					if(file_exists($_SERVER['application'] . '/controller' . $folderPath . '/' . $className . '.php')) {
+						include_once $_SERVER['application'] . '/controller' . $folderPath . '/' . $className . '.php';
 
 						
 						$explodedSegment = explode('_', $segment);
