@@ -20,6 +20,7 @@
 			$found = false;
 			$lastSegment = '';
 
+			print_r($this->_segments);
 
 			if(empty($this->_segments[(count($this->_segments) - 1)])){
 				include $_SERVER['application'] . '/config/Router.php';
