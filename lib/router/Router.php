@@ -20,8 +20,6 @@
 			$found = false;
 			$lastSegment = '';
 
-			print_r($this->_segments);
-
 			if(empty($this->_segments[(count($this->_segments) - 1)])){
 				include $_SERVER['application'] . '/config/Router.php';
 
@@ -48,7 +46,7 @@
 
 
 				foreach ($this->_segments as $segment) {
-
+					echo $segment;
 					$explodedSegment = explode('_', $segment);
 
 					foreach ($explodedSegment as &$value) {
