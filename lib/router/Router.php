@@ -21,7 +21,7 @@
 			$lastSegment = '';
 
 
-			if(empty($this->_segments[0])){
+			if(empty($this->_segments[(count($this->_segments) - 1)])){
 				include $_SERVER['application'] . '/config/Router.php';
 
 
