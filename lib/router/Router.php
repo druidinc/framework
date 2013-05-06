@@ -46,12 +46,12 @@
 
 
 				foreach ($this->_segments as $segment) {
-					echo $segment;
 					$explodedSegment = explode('_', $segment);
 
 					foreach ($explodedSegment as &$value) {
 						$value = ucfirst($value);
 					}
+
 
 					$className =  implode('_', $explodedSegment);
 
