@@ -17,8 +17,7 @@
 
 
 		public function __construct(){			
-
-			include $_SERVER['application'] . '/config/Router.php';
+			global $rtr_config;
 
 			$this->session = Session::getInstance();
 			$this->load = Loader::getInstance();
@@ -47,6 +46,17 @@
 				return self::$_instance;
 			} else
 				return self::$_instance;
+		}
+
+		public function validateGetField($field, $getArray){
+			if(is_array($getArray)) {
+				if(count($getArray)) {
+					if(array_key_exists($field, $getArray) && strlen(trim($getArray[$field])))
+						return true;
+				}
+			}
+
+			return false;
 		}
 
 		public function __destruct(){

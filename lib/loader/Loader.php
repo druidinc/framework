@@ -3,8 +3,7 @@
 		die ('Unauthorized access. File forbidden.');
 
 	include 'LoaderAccessors.php';
-	include $_SERVER['lib'] . '/template/Smarty.class.php';
-	include $_SERVER['security'] . '/NoCSRF.php';
+	
 
 	class Loader extends MagicMethods {
 		private $_className = '';
@@ -36,7 +35,7 @@
 
 
 		public function controller($controllerName){
-			include $_SERVER['application'] . '/config/Router.php';
+			global $rtr_config;
 			
 			$path = $rtr_config['base_url'] . $controllerName;
 			
@@ -45,7 +44,7 @@
 		}
 
 		public function view($viewName,$data = array(),$fetch=false){
-			
+			global $theme_config,$rtr_config;
 
 			$this->_viewName = $viewName;
 
@@ -71,8 +70,7 @@
 
 
 
-			include $_SERVER['config'] . '/Router.php';
-			include $_SERVER['config'] . '/Themes.php';
+			
 
 
 			foreach ($theme_config as $key => $value) {
