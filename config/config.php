@@ -18,4 +18,5 @@
 	$_SERVER['db'] = 'application/resources/db';
 	$_SERVER['assets'] = 'application/assets';
 	$_SERVER['tools'] = 'framework/tools';
+	$_SERVER['vendor'] = 'framework/vendor';
 ?>
