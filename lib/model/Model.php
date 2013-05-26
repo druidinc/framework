@@ -9,8 +9,9 @@
 
 
 		public function __construct(){
-			global $db_config;
 			
+			require_once $_SERVER['lib'] . '/database/Database.php';	
+			include $_SERVER['config'] . '/Database.php';
 
 			$this->db_config = $db_config;
 			$this->db = Database::getInstance($this->db_config);
