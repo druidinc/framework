@@ -95,6 +95,7 @@
 			
 			
 			$data['base_url'] = $rtr_config['base_url'];
+			$data['icon'] = $_SERVER['icon'];
 
 
 
@@ -187,6 +188,13 @@
 			$html = str_replace('}', '', $html);
 			$html = str_replace('(', '', $html);
 			$html = str_replace(')', '', $html);
+			$html = str_replace('<header>', '', $html);
+			$html = str_replace('</header>', '', $html);
+			$html = str_replace('<nav>', '', $html);
+			$html = str_replace('</nav>', '', $html);
+			$html = str_replace('<body>', '', $html);
+			$html = str_replace('</body>', '', $html);
+			$html = str_replace('</heade>', '', $html);
 			$html = str_replace('<gcse:search></gcse:search>', '', $html);
 		    $dom->loadHTML($html); 
 		    //discard white space

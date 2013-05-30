@@ -21,4 +21,5 @@
 	$_SERVER['tools'] = 'framework/tools';
 
 	$_SERVER['vendor'] = 'framework/vendor';
+	$_SERVER['icon'] = 'favicon.ico';
 ?>
