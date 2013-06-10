@@ -95,7 +95,7 @@
 			
 			
 			$data['base_url'] = $rtr_config['base_url'];
-			$data['icon'] = $_SERVER['icon'];
+			$data['icon'] = str_replace("index.php/", "", $data['base_url']) . $_SERVER['icon'];
 
 
 
